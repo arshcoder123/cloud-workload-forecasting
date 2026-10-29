@@ -1,4 +1,22 @@
-*.egg-info/
-.venv/
-.pytest_cache/
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Dataset
+challenge_data/
+data-v1.tar.gz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

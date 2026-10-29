@@ -7,10 +7,17 @@ name = "cloud-workload-forecasting"
 version = "1.0.0"
 description = "Candidate starter utilities for a cloud workload forecasting take-home"
 requires-python = ">=3.11"
-dependencies = ["numpy>=1.26", "pandas>=2.0"]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "statsmodels>=0.14",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0","ipykernel"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
