@@ -78,7 +78,7 @@ def ridge_direct(n_lags=12, alpha=1.0):
             if len(rows) < 8:
                 return np.repeat(train.mean(), h)
             X = np.array([train[i - L:i] for i in rows])
-            X = np.c_[X, X.mean(1)]                          # add rolling mean
+            X = np.c_[X, X.mean(1)]
             y = np.array([train[i + k - 1] for i in rows])
             m = Ridge(alpha=alpha).fit(X, y)
             last = train[-L:]
@@ -91,7 +91,7 @@ STATISTICAL = {
     "ar2":        arima((2, 0, 0)),
     "arma11":     arima((1, 0, 1)),
     "arima111":   arima((1, 1, 1)),
-    "ima11":      arima((0, 1, 1)),     # equivalent to simple exp. smoothing
+    "ima11":      arima((0, 1, 1)),
     "ets_ses":    ets(),
     "ets_damped": ets("add", damped=True),
     "sarima_s12": sarima((1, 0, 0), (1, 0, 0, 12)),

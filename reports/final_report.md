@@ -159,7 +159,7 @@ python -m forecasting.predict --data challenge_data --output predictions.csv
 
 The command selects a model per target by validation, writes 24 rows with the columns `timestamp,active_vm_count,aggregate_cpu_utilization`, and takes the timestamps from the data. The EDA and model-comparison notebooks are in `notebooks/` and write their figures to `reports/figures/`.
 
-## Appendix: figures not shown above
+## Appendix: Additional Figures
 
 `03_vm_count.png` (VM count), `06_distribution.png` (CPU distribution), `07_peaks.png` (peaks), `09_category.png` (categories), `11_error_by_origin.png` (error by origin), `13_forecast.png` (forecast).
 

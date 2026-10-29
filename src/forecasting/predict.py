@@ -20,7 +20,7 @@ def main():
     out = pd.DataFrame({"timestamp": holdout_ts.to_numpy()})
     for col in ["active_vm_count", "aggregate_cpu_utilization"]:
         vals = train[col].to_numpy()
-        ranked = compare(vals, models, HORIZON)          # validation only
+        ranked = compare(vals, models, HORIZON)
         tied = np.allclose(ranked["mae"], ranked["mae"].iloc[0], atol=1e-9)
         best = "persistence" if tied else ranked.index[0]
         print(f"{col}: selected {best}")

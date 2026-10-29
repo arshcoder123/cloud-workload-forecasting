@@ -11,8 +11,8 @@ def main():
 
     cpu, _ = load(a.data)
     y = build_targets(cpu)
-    train, _ = split(y)                      # holdout values never loaded into train
-    print("train length:", len(train), "last timestamp:", train.index[-1])  # 110, 32700
+    train, _ = split(y)
+    print("train length:", len(train), "last timestamp:", train.index[-1])
 
     models = {**BASELINES, **STATISTICAL}
     for col in train.columns:
